@@ -1,1 +1,1076 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <title>My Profile - Barrotut Taqiyah</title>
+
+    <style>
+        /* =========================
+           RESET
+        ========================= */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #0b1220;
+            color: #e8eef7;
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+
+        /* =========================
+           NAVBAR
+        ========================= */
+        nav {
+            width: 100%;
+            background: #111a2c;
+            border-bottom: 1px solid #26354f;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1050px;
+            margin: auto;
+            height: 58px;
+            padding: 0 25px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 18px;
+            font-weight: bold;
+            color: #55c7ff;
+            letter-spacing: 1px;
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 20px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            font-size: 11px;
+            color: #aebbd0;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #55c7ff;
+        }
+
+
+        /* =========================
+           CONTAINER
+        ========================= */
+        .container {
+            width: 92%;
+            max-width: 1050px;
+            margin: auto;
+        }
+
+
+        /* =========================
+           HERO
+        ========================= */
+        .hero {
+            text-align: center;
+            padding: 38px 20px 28px;
+        }
+
+        .profile {
+            width: 90px;
+            height: 90px;
+
+            border-radius: 50%;
+            border: 2px solid #55c7ff;
+
+            object-fit: cover;
+
+            background: #18243a;
+
+            margin-bottom: 12px;
+
+            box-shadow:
+                0 0 0 5px rgba(85, 199, 255, 0.06),
+                0 0 25px rgba(85, 199, 255, 0.15);
+        }
+
+        .hello {
+            color: #55c7ff;
+            font-size: 10px;
+            margin-bottom: 2px;
+        }
+
+        .hero h1 {
+            font-size: 27px;
+            color: #ffffff;
+            margin-bottom: 2px;
+        }
+
+        .hero h3 {
+            font-size: 11px;
+            color: #9dacbf;
+            font-weight: normal;
+        }
+
+        .hero-description {
+            max-width: 500px;
+            margin: 10px auto 15px;
+
+            color: #7f8da3;
+            font-size: 11px;
+        }
+
+        .hero-button {
+            display: inline-block;
+
+            padding: 7px 13px;
+
+            border: 1px solid #55c7ff;
+            border-radius: 5px;
+
+            color: #55c7ff;
+            font-size: 10px;
+
+            transition: 0.3s;
+        }
+
+        .hero-button:hover {
+            background: #55c7ff;
+            color: #08101d;
+        }
+
+
+        /* =========================
+           SECTION
+        ========================= */
+        .section {
+            margin-bottom: 15px;
+        }
+
+        .section-title {
+            color: #55c7ff;
+            font-size: 11px;
+            font-weight: bold;
+
+            margin-bottom: 6px;
+        }
+
+
+        /* =========================
+           CARD
+        ========================= */
+        .card {
+            background: #1a263b;
+            border: 1px solid #253550;
+
+            border-radius: 5px;
+
+            padding: 12px;
+
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            border-color: #55c7ff;
+            transform: translateY(-2px);
+        }
+
+        .card h3 {
+            color: #ffffff;
+            font-size: 13px;
+            margin-bottom: 4px;
+        }
+
+        .card p {
+            color: #a9b5c7;
+            font-size: 10px;
+        }
+
+
+        /* =========================
+           MOTIVATION
+        ========================= */
+        .motivation {
+            border-left: 3px solid #55c7ff;
+        }
+
+        .motivation p {
+            color: #c4cfdd;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================= */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 6px;
+        }
+
+        .skill-card {
+            background: #1a263b;
+            border: 1px solid #253550;
+
+            padding: 9px 11px;
+
+            border-radius: 5px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            border-color: #55c7ff;
+        }
+
+        .skill-name {
+            color: #ffffff;
+            font-size: 10px;
+            font-weight: bold;
+        }
+
+        .skill-level {
+            font-size: 8px;
+            color: #55c7ff;
+            background: #122c40;
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+
+
+        /* =========================
+           PROJECT
+        ========================= */
+        .project-card {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .project-title {
+            display: flex;
+            align-items: center;
+            gap: 7px;
+        }
+
+        .project-icon {
+            color: #55c7ff;
+            font-size: 17px;
+        }
+
+        .project-title h3 {
+            margin: 0;
+        }
+
+        .tags {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            font-size: 8px;
+            color: #55c7ff;
+            background: #122c40;
+
+            padding: 3px 6px;
+            border-radius: 3px;
+        }
+
+
+        /* =========================
+           COMMIT
+        ========================= */
+        .commit-card {
+            background: #131e31;
+            border: 1px solid #253550;
+            border-radius: 5px;
+            padding: 12px;
+
+            font-family: Consolas, monospace;
+        }
+
+        .commit {
+            margin-bottom: 5px;
+            color: #aebbd0;
+            font-size: 9px;
+        }
+
+        .commit:last-child {
+            margin-bottom: 0;
+        }
+
+        .commit-hash {
+            color: #55c7ff;
+        }
+
+        .commit-message {
+            color: #c8d2df;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================= */
+        .education {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .education-left h3 {
+            color: #ffffff;
+            font-size: 10px;
+            margin-bottom: 3px;
+        }
+
+        .education-left p {
+            color: #9dacbf;
+            font-size: 9px;
+        }
+
+        .education-year {
+            color: #55c7ff;
+            font-size: 9px;
+            text-align: right;
+        }
+
+
+        /* =========================
+           IDENTITY
+        ========================= */
+        .identity-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+
+        .identity-item {
+            background: #1a263b;
+            border: 1px solid #253550;
+
+            border-radius: 5px;
+
+            padding: 9px 11px;
+        }
+
+        .identity-item small {
+            display: block;
+            color: #718096;
+            font-size: 8px;
+            margin-bottom: 2px;
+        }
+
+        .identity-item strong {
+            color: #dce5f0;
+            font-size: 10px;
+        }
+
+
+        /* =========================
+           MODERN DESIGN
+        ========================= */
+        .modern-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 6px;
+        }
+
+        .modern-item {
+            background: #1a263b;
+            border: 1px solid #253550;
+            border-radius: 5px;
+
+            padding: 12px;
+            text-align: center;
+        }
+
+        .modern-icon {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .modern-item h3 {
+            font-size: 10px;
+            color: #55c7ff;
+            margin-bottom: 3px;
+        }
+
+        .modern-item p {
+            color: #8f9caf;
+            font-size: 8px;
+        }
+
+
+        /* =========================
+           THEME
+        ========================= */
+        .theme-card {
+            background:
+                linear-gradient(
+                    135deg,
+                    #162238,
+                    #111a2c
+                );
+
+            border: 1px solid #55c7ff;
+            text-align: center;
+        }
+
+        .theme-card h3 {
+            color: #55c7ff;
+            margin-bottom: 4px;
+        }
+
+        .theme-card p {
+            color: #9dacbf;
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================= */
+        footer {
+            margin-top: 25px;
+
+            border-top: 1px solid #253550;
+
+            text-align: center;
+
+            padding: 18px;
+
+            color: #69788e;
+            font-size: 9px;
+        }
+
+        footer strong {
+            color: #55c7ff;
+        }
+
+        .footer-links {
+            margin-top: 6px;
+        }
+
+        .footer-links a {
+            color: #55c7ff;
+            margin: 0 5px;
+        }
+
+
+        /* =========================
+           RESPONSIVE
+        ========================= */
+        @media (max-width: 700px) {
+
+            .nav-container {
+                height: auto;
+                padding: 13px 15px;
+
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .nav-menu {
+                gap: 12px;
+            }
+
+            .hero {
+                padding-top: 30px;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .identity-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .modern-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+        }
+
+        @media (max-width: 450px) {
+
+            .identity-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .education {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 5px;
+            }
+
+            .education-year {
+                text-align: left;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================= -->
+    <nav>
+        <div class="nav-container">
+
+            <div class="logo">
+                UUT.DEV
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="#about">Home</a></li>
+                <li><a href="#skills">About</a></li>
+                <li><a href="#project">Projects</a></li>
+            </ul>
+
+        </div>
+    </nav>
+
+
+    <!-- =========================
+         HERO
+    ========================= -->
+    <header class="hero">
+
+        <!--
+            Simpan foto kamu dengan nama:
+            foto.jpg
+
+            di folder yang sama dengan index.html
+        -->
+        <img
+            src="foto.jpg"
+            alt="Foto Barrotut Taqiyah"
+            class="profile"
+        >
+
+        <div class="hello">
+            HELLO, I'M
+        </div>
+
+        <h1>
+            Barrotut Taqiyah
+        </h1>
+
+        <h3>
+            Informatics Student | Web Developer
+        </h3>
+
+        <p class="hero-description">
+            Mahasiswa Teknik Informatika yang sedang belajar,
+            berkembang, dan membuat berbagai proyek di bidang teknologi.
+        </p>
+
+        <a href="#about" class="hero-button">
+            Explore My Profile ↓
+        </a>
+
+    </header>
+
+
+    <main class="container">
+
+
+        <!-- =========================
+             1. MOTIVASI
+        ========================= -->
+        <section class="section" id="about">
+
+            <div class="section-title">
+                1. About Me
+            </div>
+
+            <div class="card motivation">
+
+                <h3>
+                    Motivasi Hidup
+                </h3>
+
+                <p>
+                    Saya ingin terus mengembangkan kemampuan di bidang
+                    teknologi, belajar dari setiap proses, dan membuat
+                    aplikasi yang bermanfaat.
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             2. SKILL
+        ========================= -->
+        <section class="section" id="skills">
+
+            <div class="section-title">
+                2. Tech Stack
+            </div>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <span class="skill-name">
+                        HTML & CSS
+                    </span>
+
+                    <span class="skill-level">
+                        Intermediate
+                    </span>
+                </div>
+
+
+                <div class="skill-card">
+                    <span class="skill-name">
+                        JavaScript
+                    </span>
+
+                    <span class="skill-level">
+                        Beginner
+                    </span>
+                </div>
+
+
+                <div class="skill-card">
+                    <span class="skill-name">
+                        Git
+                    </span>
+
+                    <span class="skill-level">
+                        Beginner
+                    </span>
+                </div>
+
+
+                <div class="skill-card">
+                    <span class="skill-name">
+                        GitHub
+                    </span>
+
+                    <span class="skill-level">
+                        Beginner
+                    </span>
+                </div>
+
+
+                <div class="skill-card">
+                    <span class="skill-name">
+                        SQL / Database
+                    </span>
+
+                    <span class="skill-level">
+                        Beginner
+                    </span>
+                </div>
+
+
+                <div class="skill-card">
+                    <span class="skill-name">
+                        Flutter
+                    </span>
+
+                    <span class="skill-level">
+                        Sedang dipelajari
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             3. PROJECT
+        ========================= -->
+        <section class="section" id="project">
+
+            <div class="section-title">
+                3. My Projects
+            </div>
+
+            <div class="card project-card">
+
+                <div class="project-title">
+
+                    <div class="project-icon">
+                        ◇
+                    </div>
+
+                    <h3>
+                        Sistem Informasi Absensi Siswa
+                    </h3>
+
+                </div>
+
+                <p>
+                    Aplikasi untuk membantu mengelola data siswa,
+                    kelas, kategori, dan pencatatan absensi.
+                </p>
+
+                <div class="tags">
+
+                    <span class="tag">
+                        Svelte
+                    </span>
+
+                    <span class="tag">
+                        JavaScript
+                    </span>
+
+                    <span class="tag">
+                        MySQL
+                    </span>
+
+                    <span class="tag">
+                        GitHub
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             4. COMMIT
+        ========================= -->
+        <section class="section">
+
+            <div class="section-title">
+                4. GitHub Contributions
+            </div>
+
+            <div class="commit-card">
+
+                <div class="commit">
+                    <span class="commit-hash">
+                        docs(p1):
+                    </span>
+
+                    <span class="commit-message">
+                        init My Profile
+                    </span>
+                </div>
+
+
+                <div class="commit">
+                    <span class="commit-hash">
+                        feat(p1):
+                    </span>
+
+                    <span class="commit-message">
+                        biodata + foto
+                    </span>
+                </div>
+
+
+                <div class="commit">
+                    <span class="commit-hash">
+                        style(p1):
+                    </span>
+
+                    <span class="commit-message">
+                        tema + polish
+                    </span>
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             5. EDUCATION
+        ========================= -->
+        <section class="section">
+
+            <div class="section-title">
+                5. Education
+            </div>
+
+            <div class="card education">
+
+                <div class="education-left">
+
+                    <h3>
+                        Universitas Madura
+                    </h3>
+
+                    <p>
+                        Teknik Informatika
+                    </p>
+
+                </div>
+
+                <div class="education-year">
+                    2024 — Sekarang
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             6. PERSONAL IDENTITY
+        ========================= -->
+        <section class="section">
+
+            <div class="section-title">
+                6. Personal Identity
+            </div>
+
+            <div class="identity-grid">
+
+                <div class="identity-item">
+
+                    <small>
+                        Nama
+                    </small>
+
+                    <strong>
+                        Barrotut Taqiyah
+                    </strong>
+
+                </div>
+
+
+                <div class="identity-item">
+
+                    <small>
+                        Panggilan
+                    </small>
+
+                    <strong>
+                        Uut
+                    </strong>
+
+                </div>
+
+
+                <div class="identity-item">
+
+                    <small>
+                        NIM
+                    </small>
+
+                    <strong>
+                        2024520053
+                    </strong>
+
+                </div>
+
+
+                <div class="identity-item">
+
+                    <small>
+                        Program Studi
+                    </small>
+
+                    <strong>
+                        Teknik Informatika
+                    </strong>
+
+                </div>
+
+
+                <div class="identity-item">
+
+                    <small>
+                        Universitas
+                    </small>
+
+                    <strong>
+                        Universitas Madura
+                    </strong>
+
+                </div>
+
+
+                <div class="identity-item">
+
+                    <small>
+                        Lokasi
+                    </small>
+
+                    <strong>
+                        Pamekasan, Jawa Timur
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             7. MODERN DESIGN
+        ========================= -->
+        <section class="section">
+
+            <div class="section-title">
+                7. Modern & Responsive
+            </div>
+
+            <div class="modern-grid">
+
+                <div class="modern-item">
+
+                    <div class="modern-icon">
+                        💻
+                    </div>
+
+                    <h3>
+                        Responsive
+                    </h3>
+
+                    <p>
+                        Nyaman digunakan di laptop maupun smartphone.
+                    </p>
+
+                </div>
+
+
+                <div class="modern-item">
+
+                    <div class="modern-icon">
+                        ⚡
+                    </div>
+
+                    <h3>
+                        Simple
+                    </h3>
+
+                    <p>
+                        Tampilan sederhana dan mudah dipahami.
+                    </p>
+
+                </div>
+
+
+                <div class="modern-item">
+
+                    <div class="modern-icon">
+                        🎨
+                    </div>
+
+                    <h3>
+                        Modern
+                    </h3>
+
+                    <p>
+                        Menggunakan desain dark mode dengan aksen biru.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- =========================
+             8. THEME
+        ========================= -->
+        <section class="section">
+
+            <div class="section-title">
+                8. Theme
+            </div>
+
+            <div class="card theme-card">
+
+                <h3>
+                    Tech Stack
+                </h3>
+
+                <p>
+                    Konsep tampilan dibuat dengan nuansa teknologi,
+                    menggunakan dark mode, kartu informasi, dan
+                    aksen biru agar terlihat modern.
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         FOOTER
+    ========================= -->
+    <footer>
+
+        <div>
+            Dibuat dengan ♥ oleh
+            <strong>053_Uut</strong>
+            — P1 Pemrograman Platform
+        </div>
+
+        <div class="footer-links">
+
+            <a
+                href="https://github.com/053_Uut"
+                target="_blank">
+                GitHub
+            </a>
+
+            <span>•</span>
+
+            <a
+                href="https://github.com/053_Uut/My-Profile"
+                target="_blank">
+                Repository
+            </a>
+
+            <span>•</span>
+
+            <a href="#">
+                Video P1
+            </a>
+
+        </div>
+
+    </footer>
+
+</body>
+</html>
