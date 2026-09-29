@@ -58,6 +58,8 @@ Project ini menjadi salah satu pengalaman saya dalam menerapkan pemrograman dan 
 
 ---
 
+link youtube
+
 ## 📁 Struktur Repository
 
 ```text
