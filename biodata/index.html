@@ -7,9 +7,6 @@
     <title>My Profile - Barrotut Taqiyah</title>
 
     <style>
-        /* =========================
-           RESET
-        ========================= */
         * {
             margin: 0;
             padding: 0;
@@ -22,8 +19,8 @@
 
         body {
             font-family: Arial, Helvetica, sans-serif;
-            background: #0b1220;
-            color: #e8eef7;
+            background: #f5f8ff;
+            color: #26334a;
             font-size: 13px;
             line-height: 1.5;
         }
@@ -33,14 +30,13 @@
             color: inherit;
         }
 
-
         /* =========================
            NAVBAR
         ========================= */
         nav {
             width: 100%;
-            background: #111a2c;
-            border-bottom: 1px solid #26354f;
+            background: #ffffff;
+            border-bottom: 1px solid #dce7f5;
             position: sticky;
             top: 0;
             z-index: 100;
@@ -60,7 +56,7 @@
         .logo {
             font-size: 18px;
             font-weight: bold;
-            color: #55c7ff;
+            color: #4f7cff;
             letter-spacing: 1px;
         }
 
@@ -72,14 +68,13 @@
 
         .nav-menu a {
             font-size: 11px;
-            color: #aebbd0;
+            color: #65748b;
             transition: 0.3s;
         }
 
         .nav-menu a:hover {
-            color: #55c7ff;
+            color: #4f7cff;
         }
-
 
         /* =========================
            CONTAINER
@@ -90,7 +85,6 @@
             margin: auto;
         }
 
-
         /* =========================
            HERO
         ========================= */
@@ -100,38 +94,38 @@
         }
 
         .profile {
-            width: 90px;
-            height: 90px;
+            width: 95px;
+            height: 95px;
 
             border-radius: 50%;
-            border: 2px solid #55c7ff;
+            border: 4px solid #ffffff;
 
             object-fit: cover;
 
-            background: #18243a;
+            background: #dfe9ff;
 
             margin-bottom: 12px;
 
             box-shadow:
-                0 0 0 5px rgba(85, 199, 255, 0.06),
-                0 0 25px rgba(85, 199, 255, 0.15);
+                0 4px 20px rgba(79, 124, 255, 0.20);
         }
 
         .hello {
-            color: #55c7ff;
+            color: #4f7cff;
             font-size: 10px;
+            font-weight: bold;
             margin-bottom: 2px;
         }
 
         .hero h1 {
-            font-size: 27px;
-            color: #ffffff;
+            font-size: 28px;
+            color: #25324a;
             margin-bottom: 2px;
         }
 
         .hero h3 {
             font-size: 11px;
-            color: #9dacbf;
+            color: #77859b;
             font-weight: normal;
         }
 
@@ -139,7 +133,7 @@
             max-width: 500px;
             margin: 10px auto 15px;
 
-            color: #7f8da3;
+            color: #68778d;
             font-size: 11px;
         }
 
@@ -148,20 +142,21 @@
 
             padding: 7px 13px;
 
-            border: 1px solid #55c7ff;
-            border-radius: 5px;
+            background: #4f7cff;
+            border-radius: 6px;
 
-            color: #55c7ff;
+            color: white;
             font-size: 10px;
+
+            box-shadow: 0 4px 12px rgba(79, 124, 255, 0.20);
 
             transition: 0.3s;
         }
 
         .hero-button:hover {
-            background: #55c7ff;
-            color: #08101d;
+            background: #3f6bea;
+            transform: translateY(-2px);
         }
-
 
         /* =========================
            SECTION
@@ -171,56 +166,60 @@
         }
 
         .section-title {
-            color: #55c7ff;
+            color: #4f7cff;
             font-size: 11px;
             font-weight: bold;
-
             margin-bottom: 6px;
         }
-
 
         /* =========================
            CARD
         ========================= */
         .card {
-            background: #1a263b;
-            border: 1px solid #253550;
+            background: #ffffff;
+            border: 1px solid #dce7f5;
 
-            border-radius: 5px;
+            border-radius: 7px;
 
             padding: 12px;
+
+            box-shadow: 0 3px 12px rgba(57, 76, 112, 0.06);
 
             transition: 0.3s;
         }
 
         .card:hover {
-            border-color: #55c7ff;
+            border-color: #b8caff;
             transform: translateY(-2px);
+            box-shadow: 0 7px 20px rgba(79, 124, 255, 0.10);
         }
 
         .card h3 {
-            color: #ffffff;
+            color: #34425b;
             font-size: 13px;
             margin-bottom: 4px;
         }
 
         .card p {
-            color: #a9b5c7;
+            color: #718096;
             font-size: 10px;
         }
-
 
         /* =========================
            MOTIVATION
         ========================= */
         .motivation {
-            border-left: 3px solid #55c7ff;
+            border-left: 3px solid #4f7cff;
+            background: linear-gradient(
+                90deg,
+                #eef3ff,
+                #ffffff
+            );
         }
 
         .motivation p {
-            color: #c4cfdd;
+            color: #61718a;
         }
-
 
         /* =========================
            SKILLS
@@ -232,38 +231,40 @@
         }
 
         .skill-card {
-            background: #1a263b;
-            border: 1px solid #253550;
+            background: #ffffff;
+            border: 1px solid #dce7f5;
 
             padding: 9px 11px;
 
-            border-radius: 5px;
+            border-radius: 6px;
 
             display: flex;
             align-items: center;
             justify-content: space-between;
 
+            box-shadow: 0 2px 8px rgba(57, 76, 112, 0.04);
+
             transition: 0.3s;
         }
 
         .skill-card:hover {
-            border-color: #55c7ff;
+            border-color: #aebfff;
+            background: #f8faff;
         }
 
         .skill-name {
-            color: #ffffff;
+            color: #3c4a62;
             font-size: 10px;
             font-weight: bold;
         }
 
         .skill-level {
             font-size: 8px;
-            color: #55c7ff;
-            background: #122c40;
+            color: #536fd9;
+            background: #e9eeff;
             padding: 3px 6px;
-            border-radius: 3px;
+            border-radius: 4px;
         }
-
 
         /* =========================
            PROJECT
@@ -281,7 +282,7 @@
         }
 
         .project-icon {
-            color: #55c7ff;
+            color: #7b61ff;
             font-size: 17px;
         }
 
@@ -297,29 +298,30 @@
 
         .tag {
             font-size: 8px;
-            color: #55c7ff;
-            background: #122c40;
+            color: #5a54b6;
+            background: #f0edff;
 
             padding: 3px 6px;
-            border-radius: 3px;
+            border-radius: 4px;
         }
-
 
         /* =========================
            COMMIT
         ========================= */
         .commit-card {
-            background: #131e31;
-            border: 1px solid #253550;
-            border-radius: 5px;
+            background: #ffffff;
+            border: 1px solid #dce7f5;
+            border-radius: 7px;
             padding: 12px;
 
             font-family: Consolas, monospace;
+
+            box-shadow: 0 3px 12px rgba(57, 76, 112, 0.05);
         }
 
         .commit {
             margin-bottom: 5px;
-            color: #aebbd0;
+            color: #68778d;
             font-size: 9px;
         }
 
@@ -328,13 +330,12 @@
         }
 
         .commit-hash {
-            color: #55c7ff;
+            color: #4f7cff;
         }
 
         .commit-message {
-            color: #c8d2df;
+            color: #536174;
         }
-
 
         /* =========================
            EDUCATION
@@ -346,22 +347,21 @@
         }
 
         .education-left h3 {
-            color: #ffffff;
+            color: #34425b;
             font-size: 10px;
             margin-bottom: 3px;
         }
 
         .education-left p {
-            color: #9dacbf;
+            color: #7a8799;
             font-size: 9px;
         }
 
         .education-year {
-            color: #55c7ff;
+            color: #4f7cff;
             font-size: 9px;
             text-align: right;
         }
-
 
         /* =========================
            IDENTITY
@@ -373,26 +373,27 @@
         }
 
         .identity-item {
-            background: #1a263b;
-            border: 1px solid #253550;
+            background: #ffffff;
+            border: 1px solid #dce7f5;
 
-            border-radius: 5px;
+            border-radius: 6px;
 
             padding: 9px 11px;
+
+            box-shadow: 0 2px 8px rgba(57, 76, 112, 0.04);
         }
 
         .identity-item small {
             display: block;
-            color: #718096;
+            color: #8996a8;
             font-size: 8px;
             margin-bottom: 2px;
         }
 
         .identity-item strong {
-            color: #dce5f0;
+            color: #43516a;
             font-size: 10px;
         }
-
 
         /* =========================
            MODERN DESIGN
@@ -404,12 +405,14 @@
         }
 
         .modern-item {
-            background: #1a263b;
-            border: 1px solid #253550;
-            border-radius: 5px;
+            background: #ffffff;
+            border: 1px solid #dce7f5;
+            border-radius: 6px;
 
             padding: 12px;
             text-align: center;
+
+            box-shadow: 0 2px 8px rgba(57, 76, 112, 0.04);
         }
 
         .modern-icon {
@@ -419,40 +422,37 @@
 
         .modern-item h3 {
             font-size: 10px;
-            color: #55c7ff;
+            color: #4f7cff;
             margin-bottom: 3px;
         }
 
         .modern-item p {
-            color: #8f9caf;
+            color: #8592a5;
             font-size: 8px;
         }
-
 
         /* =========================
            THEME
         ========================= */
         .theme-card {
-            background:
-                linear-gradient(
-                    135deg,
-                    #162238,
-                    #111a2c
-                );
+            background: linear-gradient(
+                135deg,
+                #edf3ff,
+                #f7f3ff
+            );
 
-            border: 1px solid #55c7ff;
+            border: 1px solid #cdd9ff;
             text-align: center;
         }
 
         .theme-card h3 {
-            color: #55c7ff;
+            color: #4f7cff;
             margin-bottom: 4px;
         }
 
         .theme-card p {
-            color: #9dacbf;
+            color: #718096;
         }
-
 
         /* =========================
            FOOTER
@@ -460,18 +460,20 @@
         footer {
             margin-top: 25px;
 
-            border-top: 1px solid #253550;
+            border-top: 1px solid #dce7f5;
 
             text-align: center;
 
             padding: 18px;
 
-            color: #69788e;
+            background: #ffffff;
+
+            color: #8a96a8;
             font-size: 9px;
         }
 
         footer strong {
-            color: #55c7ff;
+            color: #4f7cff;
         }
 
         .footer-links {
@@ -479,10 +481,9 @@
         }
 
         .footer-links a {
-            color: #55c7ff;
+            color: #4f7cff;
             margin: 0 5px;
         }
-
 
         /* =========================
            RESPONSIVE
@@ -544,10 +545,9 @@
 
 <body>
 
-    <!-- =========================
-         NAVBAR
-    ========================= -->
+    <!-- NAVBAR -->
     <nav>
+
         <div class="nav-container">
 
             <div class="logo">
@@ -561,20 +561,13 @@
             </ul>
 
         </div>
+
     </nav>
 
 
-    <!-- =========================
-         HERO
-    ========================= -->
+    <!-- HERO -->
     <header class="hero">
 
-        <!--
-            Simpan foto kamu dengan nama:
-            foto.jpg
-
-            di folder yang sama dengan index.html
-        -->
         <img
             src="foto.jpg"
             alt="Foto Barrotut Taqiyah"
@@ -608,9 +601,7 @@
     <main class="container">
 
 
-        <!-- =========================
-             1. MOTIVASI
-        ========================= -->
+        <!-- 1. ABOUT ME -->
         <section class="section" id="about">
 
             <div class="section-title">
@@ -634,9 +625,7 @@
         </section>
 
 
-        <!-- =========================
-             2. SKILL
-        ========================= -->
+        <!-- 2. TECH STACK -->
         <section class="section" id="skills">
 
             <div class="section-title">
@@ -655,7 +644,6 @@
                     </span>
                 </div>
 
-
                 <div class="skill-card">
                     <span class="skill-name">
                         JavaScript
@@ -665,7 +653,6 @@
                         Beginner
                     </span>
                 </div>
-
 
                 <div class="skill-card">
                     <span class="skill-name">
@@ -677,7 +664,6 @@
                     </span>
                 </div>
 
-
                 <div class="skill-card">
                     <span class="skill-name">
                         GitHub
@@ -688,7 +674,6 @@
                     </span>
                 </div>
 
-
                 <div class="skill-card">
                     <span class="skill-name">
                         SQL / Database
@@ -698,7 +683,6 @@
                         Beginner
                     </span>
                 </div>
-
 
                 <div class="skill-card">
                     <span class="skill-name">
@@ -715,9 +699,7 @@
         </section>
 
 
-        <!-- =========================
-             3. PROJECT
-        ========================= -->
+        <!-- 3. PROJECT -->
         <section class="section" id="project">
 
             <div class="section-title">
@@ -745,21 +727,10 @@
 
                 <div class="tags">
 
-                    <span class="tag">
-                        Svelte
-                    </span>
-
-                    <span class="tag">
-                        JavaScript
-                    </span>
-
-                    <span class="tag">
-                        MySQL
-                    </span>
-
-                    <span class="tag">
-                        GitHub
-                    </span>
+                    <span class="tag">Svelte</span>
+                    <span class="tag">JavaScript</span>
+                    <span class="tag">MySQL</span>
+                    <span class="tag">GitHub</span>
 
                 </div>
 
@@ -768,9 +739,7 @@
         </section>
 
 
-        <!-- =========================
-             4. COMMIT
-        ========================= -->
+        <!-- 4. GITHUB -->
         <section class="section">
 
             <div class="section-title">
@@ -789,7 +758,6 @@
                     </span>
                 </div>
 
-
                 <div class="commit">
                     <span class="commit-hash">
                         feat(p1):
@@ -799,7 +767,6 @@
                         biodata + foto
                     </span>
                 </div>
-
 
                 <div class="commit">
                     <span class="commit-hash">
@@ -816,9 +783,7 @@
         </section>
 
 
-        <!-- =========================
-             5. EDUCATION
-        ========================= -->
+        <!-- 5. EDUCATION -->
         <section class="section">
 
             <div class="section-title">
@@ -848,9 +813,7 @@
         </section>
 
 
-        <!-- =========================
-             6. PERSONAL IDENTITY
-        ========================= -->
+        <!-- 6. PERSONAL IDENTITY -->
         <section class="section">
 
             <div class="section-title">
@@ -860,80 +823,33 @@
             <div class="identity-grid">
 
                 <div class="identity-item">
-
-                    <small>
-                        Nama
-                    </small>
-
-                    <strong>
-                        Barrotut Taqiyah
-                    </strong>
-
+                    <small>Nama</small>
+                    <strong>Barrotut Taqiyah</strong>
                 </div>
 
-
                 <div class="identity-item">
-
-                    <small>
-                        Panggilan
-                    </small>
-
-                    <strong>
-                        Uut
-                    </strong>
-
+                    <small>Panggilan</small>
+                    <strong>Uut</strong>
                 </div>
 
-
                 <div class="identity-item">
-
-                    <small>
-                        NIM
-                    </small>
-
-                    <strong>
-                        2024520053
-                    </strong>
-
+                    <small>NIM</small>
+                    <strong>2024520053</strong>
                 </div>
 
-
                 <div class="identity-item">
-
-                    <small>
-                        Program Studi
-                    </small>
-
-                    <strong>
-                        Teknik Informatika
-                    </strong>
-
+                    <small>Program Studi</small>
+                    <strong>Teknik Informatika</strong>
                 </div>
 
-
                 <div class="identity-item">
-
-                    <small>
-                        Universitas
-                    </small>
-
-                    <strong>
-                        Universitas Madura
-                    </strong>
-
+                    <small>Universitas</small>
+                    <strong>Universitas Madura</strong>
                 </div>
 
-
                 <div class="identity-item">
-
-                    <small>
-                        Lokasi
-                    </small>
-
-                    <strong>
-                        Pamekasan, Jawa Timur
-                    </strong>
-
+                    <small>Lokasi</small>
+                    <strong>Pamekasan, Jawa Timur</strong>
                 </div>
 
             </div>
@@ -941,9 +857,7 @@
         </section>
 
 
-        <!-- =========================
-             7. MODERN DESIGN
-        ========================= -->
+        <!-- 7. MODERN -->
         <section class="section">
 
             <div class="section-title">
@@ -968,7 +882,6 @@
 
                 </div>
 
-
                 <div class="modern-item">
 
                     <div class="modern-icon">
@@ -985,7 +898,6 @@
 
                 </div>
 
-
                 <div class="modern-item">
 
                     <div class="modern-icon">
@@ -997,7 +909,7 @@
                     </h3>
 
                     <p>
-                        Menggunakan desain dark mode dengan aksen biru.
+                        Desain bersih dengan warna yang cerah.
                     </p>
 
                 </div>
@@ -1007,9 +919,7 @@
         </section>
 
 
-        <!-- =========================
-             8. THEME
-        ========================= -->
+        <!-- 8. THEME -->
         <section class="section">
 
             <div class="section-title">
@@ -1019,25 +929,24 @@
             <div class="card theme-card">
 
                 <h3>
-                    Tech Stack
+                    Soft Blue & Lavender
                 </h3>
 
                 <p>
-                    Konsep tampilan dibuat dengan nuansa teknologi,
-                    menggunakan dark mode, kartu informasi, dan
-                    aksen biru agar terlihat modern.
+                    Menggunakan perpaduan warna putih, biru cerah,
+                    dan lavender untuk memberikan kesan modern,
+                    bersih, dan nyaman dilihat.
                 </p>
 
             </div>
 
         </section>
 
+
     </main>
 
 
-    <!-- =========================
-         FOOTER
-    ========================= -->
+    <!-- FOOTER -->
     <footer>
 
         <div>
