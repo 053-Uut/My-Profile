@@ -60,7 +60,7 @@ Project ini menjadi salah satu pengalaman saya dalam menerapkan pemrograman dan 
 ## 🔗 Link
 
 - 🎥 **YouTube:** [Video P1 Pemrograman Platform](https://youtu.be/mx7Xu-RLWbc)
-- 🖥️ **GitHub:** [My Profile Repository](https://github.com/053-Uut/My-Profile.git))
+- 🖥️ **GitHub:** [My Profile Repository](https://github.com/053-Uut/My-Profile.git)
 - 👩🏻‍💻 **Biodata:** [Biodata Saya](https://053-uut.github.io/My-Profile/biodata/)
 
 ## 📁 Struktur Repository
